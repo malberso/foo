@@ -1,0 +1,3325 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Primeros pasos en Java tralara</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Primeros pasos en Java trelere</h1>
+</header>
+<p><span id="top"></span> <a href="https://github.com/victorponz/programacion-java" class="github-fork-ribbon" title="Fork me on GitHub">Fork me on GitHub</a></p>
+<div id="write-wrapper">
+<a href="/programacion-java/">Índice</a> <a href="/programacion-java/search.html">Buscar</a> <a href="/programacion-java/intro.html">Intro</a> <a href="/programacion-java/README.html">Acerca de</a> <a href="javascript:void(0);" class="icon"><em></em></a>
+<div id="write">
+<h1 id="primeros-pasos-en-java">Primeros pasos en Java</h1>
+<div>
+<ul>
+<li><a href="#primeros-pasos-en-java">Primeros pasos en Java</a>
+<ul>
+<li><a href="#1-un-programa-que-calcula-una-división-y-una-suma">1 Un programa que calcula una división y una suma.</a></li>
+<li><a href="#2-un-programa-que-calcula-una-división-y-una-suma-enteros">2 Un programa que calcula una división y una suma (enteros).</a></li>
+<li><a href="#3-un-programa-que-calcula-y-muestra-el-área-de-un-cuadrado-de-lado-5">3 Un programa que calcula y muestra el área de un cuadrado de lado 5</a></li>
+<li><a href="#leer-un-dato-del-teclado">Leer un dato del teclado</a></li>
+<li><a href="#4-un-programa-que-calcula-y-muestra-el-área-de-un-cuadrado-cuyo-lado-se-introduce-por-pantalla">4 Un programa que calcula y muestra el área de un cuadrado cuyo lado se introduce por pantalla</a></li>
+<li><a href="#5-un-programa-que-lea-dos-números-enteros-y-muestre-el-resultado-de-sumarlos-restarlos-multiplicarlos-y-dividirlos">5 Un programa que lea dos números enteros y muestre el resultado de sumarlos, restarlos, multiplicarlos y dividirlos</a></li>
+<li><a href="#6-un-programa-que-pida-el-radio-de-una-circunferencia-y-muestre-su-área-y-su-perímetro">6 Un programa que pida el radio de una circunferencia y muestre su área y su perímetro</a></li>
+<li><a href="#7-un-programa-que-pida-el-precio-real-de-un-producto-el-precio-rebajado-y-muestre-el-descuento-realizado">7 Un programa que pida el precio real de un producto, el precio rebajado y muestre el descuento realizado</a></li>
+</ul></li>
+<li><a href="#estructuras-condicionales-if">Estructuras condicionales (if)</a>
+<ul>
+<li><a href="#8-realiza-un-programa-que-pida-la-edad-al-usuario-y-muestre-un-mensaje-si-es-mayor-de-edad">8 Realiza un programa que pida la edad al usuario y muestre un mensaje si es mayor de <strong>edad</strong></a></li>
+</ul></li>
+<li><a href="#estructuras-condicionales-if---else">Estructuras condicionales (if - else)</a>
+<ul>
+<li><a href="#9-igual-que-el-anterior-pero-que-también-muestre-un-mensaje-si-es-menor-de-edad">9 Igual que el anterior pero que también muestre un mensaje si es menor de edad</a></li>
+<li><a href="#10-diseña-un-algoritmo-que-lea-un-valor-y-muestre-si-es-positivo-o-negativo-0-es-positivo">10 Diseña un algoritmo que lea un valor y muestre si es positivo o negativo (0 es positivo)</a></li>
+<li><a href="#11-diseña-un-algoritmo-que-lea-dos-valores-y-los-muestre-en-orden-ascendente">11 Diseña un algoritmo que lea dos valores y los muestre en orden ascendente.</a></li>
+<li><a href="#12-diseña-un-algoritmo-que-lea-dos-valores-y-muestre-el-más-grande-de-ellos">12 Diseña un algoritmo que lea dos valores y muestre el más grande de ellos.</a></li>
+<li><a href="#13-realiza-un-programa-que-lea-dos-valores-y-los-orden-ascendente-o-descendentemente-según-elija-el-usuario">13 Realiza un programa que lea dos valores y los orden ascendente o descendentemente según elija el usuario.</a></li>
+</ul></li>
+<li><a href="#la-sentencia-else-if">La sentencia <code class="language-plaintext highlighter-rouge">else if</code></a>
+<ul>
+<li><a href="#14-diseña-un-algoritmo-que-lea-un-valor-numérico-entero-correspondiente-a-la-nota-de-un-examen-y-muestre-su-valor-en-letra">14 Diseña un algoritmo que lea un valor numérico entero correspondiente a la nota de un examen y muestre su valor en letra:</a></li>
+</ul></li>
+<li><a href="#estructuras-de-decisión-múltiple">Estructuras de decisión múltiple</a>
+<ul>
+<li><a href="#15-realiza-un-programa-que-lea-un-número-entero-del-1-al-10-y-que-muestre-su-valor-en-letra">15 Realiza un programa que lea un número entero del 1 al 10 y que muestre su valor en letra.</a></li>
+<li><a href="#16-realiza-un-programa-que-lea-dos-números-enteros-y-dependiendo-de-la-operación-que-indique-el-usuario-------muestre-el-resultado">16 Realiza un programa que lea dos números enteros y dependiendo de la operación que indique el usuario (+, -, * , /) muestre el resultado</a></li>
+<li><a href="#17-realiza-un-programa-que-pida-al-usuario-un-mes-e-imprima-el-número-de-días-que-tiene">17 Realiza un programa que pida al usuario un mes e imprima el número de días que tiene.</a></li>
+<li><a href="#18-diseña-un-algoritmo-que-recibe-horas-minutos-y-segundos-y-muestra-horas-minutos-y-segundos-resultantes-de-la-adición-de-un-segundo">18 Diseña un algoritmo que recibe horas, minutos y segundos y muestra horas, minutos y segundos resultantes de la adición de un segundo.</a></li>
+<li><a href="#19-diseña-un-algoritmo-que-calcule-el-salario-neto-de-un-trabajador-en-función-del-número-de-horas-de-trabajo-y-los-impuestos-según-las-siguientes-reglas">19 Diseña un algoritmo que calcule el salario neto de un trabajador en función del número de horas de trabajo y los impuestos según las siguientes reglas:</a></li>
+<li><a href="#20-precio-final">20 Precio final</a></li>
+<li><a href="#21-año-bisiesto">21 Año bisiesto</a></li>
+</ul></li>
+<li><a href="#estructuras-iterativas-loops">Estructuras Iterativas (loops)</a>
+<ul>
+<li><a href="#while">While</a></li>
+<li><a href="#until">Until</a></li>
+<li><a href="#for">For</a></li>
+<li><a href="#22-números-positivos">22 Números positivos</a></li>
+<li><a href="#23-números-positivos-ii">23 Números positivos II</a></li>
+<li><a href="#24-nota-media">24 Nota media</a></li>
+<li><a href="#25-factorial">25 Factorial</a></li>
+<li><a href="#26-tabla-de-multiplicar">26 Tabla de multiplicar</a></li>
+<li><a href="#27-impresión-de-números-i">27 Impresión de números I</a></li>
+<li><a href="#28-números-primos">28 Números primos</a></li>
+<li><a href="#29-números-primos-ii">29 Números primos II</a></li>
+<li><a href="#30-palíndromo-avanzado">30 Palíndromo (avanzado)</a></li>
+<li><a href="#31-divisores">31 Divisores</a></li>
+<li><a href="#32-fibonacci">32 Fibonacci</a></li>
+<li><a href="#33-número-áureo">33 Número Áureo</a></li>
+<li><a href="#34-sumas-sucesivas">34 Sumas sucesivas</a></li>
+<li><a href="#35-restas-sucesivas">35 Restas sucesivas</a></li>
+<li><a href="#36-decimal-a-binario-avanzado">36 Decimal a binario (avanzado)</a></li>
+<li><a href="#37-binario-a-decimal-avanzado">37 Binario a decimal (avanzado)</a></li>
+<li><a href="#38-juego-adivina-un-número--avanzado">38 Juego Adivina un número (avanzado)</a></li>
+</ul></li>
+</ul>
+<div id="menuContainer">
+<ul>
+<li><a href="#primeros-pasos-en-java">Primeros pasos en Java</a>
+<ul>
+<li><a href="#1-un-programa-que-calcula-una-división-y-una-suma">1 Un programa que calcula una división y una suma.</a></li>
+<li><a href="#2-un-programa-que-calcula-una-división-y-una-suma-enteros">2 Un programa que calcula una división y una suma (enteros).</a></li>
+<li><a href="#3-un-programa-que-calcula-y-muestra-el-área-de-un-cuadrado-de-lado-5">3 Un programa que calcula y muestra el área de un cuadrado de lado 5</a></li>
+<li><a href="#leer-un-dato-del-teclado">Leer un dato del teclado</a></li>
+<li><a href="#4-un-programa-que-calcula-y-muestra-el-área-de-un-cuadrado-cuyo-lado-se-introduce-por-pantalla">4 Un programa que calcula y muestra el área de un cuadrado cuyo lado se introduce por pantalla</a></li>
+<li><a href="#5-un-programa-que-lea-dos-números-enteros-y-muestre-el-resultado-de-sumarlos-restarlos-multiplicarlos-y-dividirlos">5 Un programa que lea dos números enteros y muestre el resultado de sumarlos, restarlos, multiplicarlos y dividirlos</a></li>
+<li><a href="#6-un-programa-que-pida-el-radio-de-una-circunferencia-y-muestre-su-área-y-su-perímetro">6 Un programa que pida el radio de una circunferencia y muestre su área y su perímetro</a></li>
+<li><a href="#7-un-programa-que-pida-el-precio-real-de-un-producto-el-precio-rebajado-y-muestre-el-descuento-realizado">7 Un programa que pida el precio real de un producto, el precio rebajado y muestre el descuento realizado</a></li>
+</ul></li>
+<li><a href="#estructuras-condicionales-if">Estructuras condicionales (if)</a>
+<ul>
+<li><a href="#8-realiza-un-programa-que-pida-la-edad-al-usuario-y-muestre-un-mensaje-si-es-mayor-de-edad">8 Realiza un programa que pida la edad al usuario y muestre un mensaje si es mayor de <strong>edad</strong></a></li>
+</ul></li>
+<li><a href="#estructuras-condicionales-if---else">Estructuras condicionales (if - else)</a>
+<ul>
+<li><a href="#9-igual-que-el-anterior-pero-que-también-muestre-un-mensaje-si-es-menor-de-edad">9 Igual que el anterior pero que también muestre un mensaje si es menor de edad</a></li>
+<li><a href="#10-diseña-un-algoritmo-que-lea-un-valor-y-muestre-si-es-positivo-o-negativo-0-es-positivo">10 Diseña un algoritmo que lea un valor y muestre si es positivo o negativo (0 es positivo)</a></li>
+<li><a href="#11-diseña-un-algoritmo-que-lea-dos-valores-y-los-muestre-en-orden-ascendente">11 Diseña un algoritmo que lea dos valores y los muestre en orden ascendente.</a></li>
+<li><a href="#12-diseña-un-algoritmo-que-lea-dos-valores-y-muestre-el-más-grande-de-ellos">12 Diseña un algoritmo que lea dos valores y muestre el más grande de ellos.</a></li>
+<li><a href="#13-realiza-un-programa-que-lea-dos-valores-y-los-orden-ascendente-o-descendentemente-según-elija-el-usuario">13 Realiza un programa que lea dos valores y los orden ascendente o descendentemente según elija el usuario.</a></li>
+</ul></li>
+<li><a href="#la-sentencia-else-if">La sentencia <code class="language-plaintext highlighter-rouge">else if</code></a>
+<ul>
+<li><a href="#14-diseña-un-algoritmo-que-lea-un-valor-numérico-entero-correspondiente-a-la-nota-de-un-examen-y-muestre-su-valor-en-letra">14 Diseña un algoritmo que lea un valor numérico entero correspondiente a la nota de un examen y muestre su valor en letra:</a></li>
+</ul></li>
+<li><a href="#estructuras-de-decisión-múltiple">Estructuras de decisión múltiple</a>
+<ul>
+<li><a href="#15-realiza-un-programa-que-lea-un-número-entero-del-1-al-10-y-que-muestre-su-valor-en-letra">15 Realiza un programa que lea un número entero del 1 al 10 y que muestre su valor en letra.</a></li>
+<li><a href="#16-realiza-un-programa-que-lea-dos-números-enteros-y-dependiendo-de-la-operación-que-indique-el-usuario-------muestre-el-resultado">16 Realiza un programa que lea dos números enteros y dependiendo de la operación que indique el usuario (+, -, * , /) muestre el resultado</a></li>
+<li><a href="#17-realiza-un-programa-que-pida-al-usuario-un-mes-e-imprima-el-número-de-días-que-tiene">17 Realiza un programa que pida al usuario un mes e imprima el número de días que tiene.</a></li>
+<li><a href="#18-diseña-un-algoritmo-que-recibe-horas-minutos-y-segundos-y-muestra-horas-minutos-y-segundos-resultantes-de-la-adición-de-un-segundo">18 Diseña un algoritmo que recibe horas, minutos y segundos y muestra horas, minutos y segundos resultantes de la adición de un segundo.</a></li>
+<li><a href="#19-diseña-un-algoritmo-que-calcule-el-salario-neto-de-un-trabajador-en-función-del-número-de-horas-de-trabajo-y-los-impuestos-según-las-siguientes-reglas">19 Diseña un algoritmo que calcule el salario neto de un trabajador en función del número de horas de trabajo y los impuestos según las siguientes reglas:</a></li>
+<li><a href="#20-precio-final">20 Precio final</a></li>
+<li><a href="#21-año-bisiesto">21 Año bisiesto</a></li>
+</ul></li>
+<li><a href="#estructuras-iterativas-loops">Estructuras Iterativas (loops)</a>
+<ul>
+<li><a href="#while">While</a></li>
+<li><a href="#until">Until</a></li>
+<li><a href="#for">For</a></li>
+<li><a href="#22-números-positivos">22 Números positivos</a></li>
+<li><a href="#23-números-positivos-ii">23 Números positivos II</a></li>
+<li><a href="#24-nota-media">24 Nota media</a></li>
+<li><a href="#25-factorial">25 Factorial</a></li>
+<li><a href="#26-tabla-de-multiplicar">26 Tabla de multiplicar</a></li>
+<li><a href="#27-impresión-de-números-i">27 Impresión de números I</a></li>
+<li><a href="#28-números-primos">28 Números primos</a></li>
+<li><a href="#29-números-primos-ii">29 Números primos II</a></li>
+<li><a href="#30-palíndromo-avanzado">30 Palíndromo (avanzado)</a></li>
+<li><a href="#31-divisores">31 Divisores</a></li>
+<li><a href="#32-fibonacci">32 Fibonacci</a></li>
+<li><a href="#33-número-áureo">33 Número Áureo</a></li>
+<li><a href="#34-sumas-sucesivas">34 Sumas sucesivas</a></li>
+<li><a href="#35-restas-sucesivas">35 Restas sucesivas</a></li>
+<li><a href="#36-decimal-a-binario-avanzado">36 Decimal a binario (avanzado)</a></li>
+<li><a href="#37-binario-a-decimal-avanzado">37 Binario a decimal (avanzado)</a></li>
+<li><a href="#38-juego-adivina-un-número--avanzado">38 Juego Adivina un número (avanzado)</a></li>
+</ul></li>
+</ul>
+<div id="topFixed" class="top-hidden">
+<a href="#" class="toogle expanded pull-left js-toolbar-action" title="Mostrar/Ocultar menú"><em></em></a>
+</div>
+<div id="indexFixed" class="top-hidden indice btn btn-sm btn-primary shadow p-2 px-3 popup-trigger" data-popup-trigger="one" style="cursor:pointer">
+<span class="toogle expanded pull-left js-toolbar-action"><em></em></span>
+</div>
+</div>
+</div>
+<div id="content">
+<h1 id="primeros-pasos-en-java">Primeros pasos en Java</h1>
+<blockquote>
+<p><em></em> En esta unidad aprenderemos a usar los tipos básicos de datos en java, a usar librerías para leer la entrada del teclado y la diferencia entre una variable y una constante. También se introducen los <a href="https://es.wikipedia.org/wiki/Diagrama_de_flujo">diagramas de flujo</a> (<em>flowcharts</em>) y aprendemos las <a href="#Estructuras%20condicionales%20\(if\)">estructuras condicionales</a>.</p>
+</blockquote>
+<h2 id="1-un-programa-que-calcula-una-división-y-una-suma">1 Un programa que calcula una división y una suma.</h2>
+<p>El primer concepto que afrontamos el un programa es que <strong>todos trabajan con datos de entrada, realizan un proceso y producen una salida</strong>.</p>
+<blockquote>
+<p><em></em> <strong>Variable</strong></p>
+<p>Cada vez que necesitamos <em>acordarnos</em> de un dato, lo hemos de almacenar en una variable.</p>
+</blockquote>
+<p><img src="/programacion-java/assets/img/java-basico/1536599756984.png" alt="1536599756984" /></p>
+<p>Os dejo un <a href="https://www.youtube.com/watch?v=bq6nJRJq27A">vídeo</a> donde se explican las variables en java</p>
+<h2 id="2-un-programa-que-calcula-una-división-y-una-suma-enteros">2 Un programa que calcula una división y una suma (enteros).</h2>
+<p><img src="/programacion-java/assets/img/java-basico/1536599861891.png" alt="1536599861891" /></p>
+<blockquote>
+<p><em></em> <a href="https://www.campusmvp.es/recursos/post/variables-y-tipos-de-datos-en-java-tipos-simples-clases-y-tipos-envoltorio-o-wrapper.aspx">Tipos de datos en java</a></p>
+</blockquote>
+<h2 id="3-un-programa-que-calcula-y-muestra-el-área-de-un-cuadrado-de-lado-5">3 Un programa que calcula y muestra el área de un cuadrado de lado 5</h2>
+<pre><code>st=&gt;start: Start:
+e=&gt;end: End:
+op1=&gt;operation: area = 5 * 5 
+io=&gt;inputoutput: Escribe area
+st-&gt;op1-&gt;io-&gt;e</code></pre>
+<blockquote>
+<p>Piensa antes de ver la solución</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13</code></pre>
+</div>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+<pre><code>public class Ejemplo3 {
+
+    public static void main(String[] args) {
+
+        int lado = 5;
+        int area = lado * lado;
+
+        System.out.println(&quot;El área del cuadrado es: &quot; + area);
+        // O también
+        System.out.printf(&quot;El área del cuadrado es: %d&quot;, area);
+    }
+
+}</code></pre>
+<p>En este caso tenemos dos tipos de variables:</p>
+<ul>
+<li><span style="color:red">(5)</span> Dato de entrada para almacenar el lado</li>
+<li><span style="color:red">(6)</span> Dato de salida para almacenar el área</li>
+</ul>
+<h2 id="leer-un-dato-del-teclado">Leer un dato del teclado</h2>
+<p>En todos los ejercicios vamos a pedir al usuario que introduzca datos. Una forma de hacerlo es mediante la utilidad <code class="language-plaintext highlighter-rouge">java.util.Scanner</code>. Haced un <strong>salto de fe</strong> que ya veréis como más adelante lo entenderéis.</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13</code></pre>
+</div>
+</div>
+<pre><code>import java.util.Scanner;
+public class Ejemplo4 {
+    public static void main (String argv[]) {
+        float lado;
+        Scanner inputValue = new Scanner(System.in);
+        
+        System.out.println(&quot;Introduce el lado:&quot;);        
+        lado = inputValue.nextFloat();
+        
+        inputValue.close();
+        //Aquí usamos los datos obtenidos
+    }
+}</code></pre>
+<p>En este código hemos introducido muchos conceptos:</p>
+<ol>
+<li><span style="color:red">(1)</span> Usamos librerías de java. Una librería es como una caja de herramientas o un <em>objeto</em> que permite realizar tareas. Estas se organizan en salas y estanterías. Por ejemplo, la librería <code class="language-plaintext highlighter-rouge">java.util.Scanner</code> es un <code class="language-plaintext highlighter-rouge">Scanner</code> que se encuentra en la estantería <code class="language-plaintext highlighter-rouge">util</code> de la sala <code class="language-plaintext highlighter-rouge">java</code>. El objecto <code class="language-plaintext highlighter-rouge">Scanner</code> puede realizar muchas tareas entre las que se encuentran la posibilidad de leer números decimales (<code class="language-plaintext highlighter-rouge">nextFloat</code>). En la estantería <code class="language-plaintext highlighter-rouge">util</code> hay muchos más <a href="https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html">objetos</a>. Por ejemplo, el objeto <code class="language-plaintext highlighter-rouge">Calendar</code> permite trabajar con datos de tipo fecha para, por ejemplo, saber qué día de la semana es una fecha.</li>
+<li><span style="color:red">(5)</span> En esta instrucción creamos un nuevo <code class="language-plaintext highlighter-rouge">Scanner</code>.</li>
+<li><span style="color:red">(8)</span> Escaneamos un valor de tipo decimal</li>
+<li><span style="color:red">(10)</span> Apagamos el <code class="language-plaintext highlighter-rouge">Scanner</code> una vez hemos dejado de usarlo</li>
+</ol>
+<blockquote>
+<p><em></em> Si en vez de introducir un número como lado introduces una letra, dará una <strong>Exception</strong> porque no puede <em>traducir</em> la letra a un número decimal. De momento, haz un salto de fe e introduce siempre en los ejercicios el tipo de dato que se espera. Ya lo arreglaremos cuando veamos las <strong>excepciones</strong></p>
+<div class="language-plaintext highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>Exception in thread &quot;main&quot; java.util.InputMismatchException
+        at java.util.Scanner.throwFor(Scanner.java:864)
+        at java.util.Scanner.next(Scanner.java:1485)
+        at java.util.Scanner.nextFloat(Scanner.java:2345)
+        at Ejemplo4.main(Ejemplo4.java:13)</code></pre>
+<h2 id="4-un-programa-que-calcula-y-muestra-el-área-de-un-cuadrado-cuyo-lado-se-introduce-por-pantalla">4 Un programa que calcula y muestra el área de un cuadrado cuyo lado se introduce por pantalla</h2>
+<p><img src="/programacion-java/assets/img/java-basico//ej3.png" /></p>
+<blockquote>
+<p>Piensa antes de ver la solución</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+//Un programa que calcula y muestra el área de un cuadrado cuyo lado se introduce por pantalla
+public class Ejemplo4 {
+    public static void main (String argv[]) {
+        float lado;
+        float area;
+        
+        // 1. Obtenemos datos
+        Scanner inputValue = new Scanner(System.in);
+        System.out.println(&quot;Introduce el lado:&quot;);
+        //Leer un carácter como Float desde el teclado
+        lado = inputValue.nextFloat();
+        inputValue.close();
+
+        // 2. Realizamos el algoritmo
+        area = lado * lado;
+        
+        // 3. Mostramos los datos
+        System.out.println(&quot;El área del cuadrado es: &quot; + area);
+        //o bien
+        System.out.printf(&quot;El área del cuadrado es: %f&quot;, area);
+        
+    }
+}</code></pre>
+<blockquote>
+<p><em></em> <strong>Estructura de un programa</strong></p>
+<p>Todos los programas informáticos tienen una estructura base:</p>
+<ol>
+<li>Se obtienen datos de entrada: desde el teclado, desde un sensor, desde Internet, etc</li>
+<li>Se procesan estos datos. Es decir a partir de los datos de entrada y de un algoritmo se generan los datos de salida.</li>
+<li>Se muestran estos datos: en pantalla, en una impresora, en una página web, etc</li>
+</ol>
+</blockquote>
+<blockquote>
+<p><em></em> <strong>Cómo escribir un programa</strong></p>
+<p><strong>Nadie escribe un programa informático de un tirón</strong></p>
+<p>Un programa informático, al igual que un libro, está compuesto de muchas instrucciones (frases y oraciones). Cuando se escribe un libro, se van creando palabras, frases, oraciones, capítulos, etc. Es decir, se debe empezar por lo más básico e ir formando el <em>todo</em>.</p>
+<p>Pues lo mismo se aplica a un programa informático: <strong>se hace poco a poco</strong>.</p>
+<ul>
+<li>La primera fase es <em>pensar</em> <strong>cómo solucionar</strong> el problema</li>
+<li>La segunda fase es <em>pensar</em> <strong>cómo descomponer</strong> el problema en partes más sencillas. Ya hemos visto que un libro se hace por partes, ¿no?. Pues piensa en esas partes. Seguro que sigue una estructura como hemos visto antes</li>
+<li>Ahora es el momento de realizar cada una de las partes definidas e ir juntándolas</li>
+<li>Y, muy importante, cada vez que realizas una parte compruebas que funciona.</li>
+</ul>
+</blockquote>
+<h2 id="5-un-programa-que-lea-dos-números-enteros-y-muestre-el-resultado-de-sumarlos-restarlos-multiplicarlos-y-dividirlos">5 Un programa que lea dos números enteros y muestre el resultado de sumarlos, restarlos, multiplicarlos y dividirlos</h2>
+<blockquote>
+<p><em></em> <a href="https://www.w3schools.com/java/java_operators.asp">Operadores en Java</a></p>
+</blockquote>
+<p><img src="/programacion-java/assets/img/java-basico//ej4-prop.png" /></p>
+<blockquote>
+<p>Piensa antes de ver la solución</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+//Un programa que lea dos números enteros y muestre el resultado de sumarlos,
+// restarlos, multiplicarlos y dividirlos
+public class Ejemplo5 {
+    public static void main (String argv[]) {
+        int n;
+        int m;
+        //Leer un carácter como Int desde el teclado
+        Scanner inputValue = new Scanner(System.in);
+        
+        System.out.println(&quot;Introduce el primer número:&quot;);
+        n = inputValue.nextInt();
+        
+        System.out.println(&quot;Introduce el segundo número:&quot;);
+        m = inputValue.nextInt();
+        inputValue.close();
+        
+        System.out.printf(&quot;El resultado de sumar %d y %d es: %d %n&quot;, n, m, n+m);
+        System.out.printf(&quot;El resultado de restar %d y %d es: %d %n&quot;, n, m, n-m);
+        System.out.printf(&quot;El resultado de multiplicar %d y %d es: %d %n&quot;, n, m, n*m);
+        System.out.printf(&quot;El resultado de dividir %d y %d es: %d %n&quot;, n, m, n/m);
+        
+    }
+}</code></pre>
+<p><strong>Nota:</strong> Los caracteres <code class="language-plaintext highlighter-rouge">%n</code> sirven para imprimir un salto de línea</p>
+<h2 id="6-un-programa-que-pida-el-radio-de-una-circunferencia-y-muestre-su-área-y-su-perímetro">6 Un programa que pida el radio de una circunferencia y muestre su área y su perímetro</h2>
+<p><img src="/programacion-java/assets/img/java-basico//ej5-prop.png" /></p>
+<blockquote>
+<p><em></em></p>
+<p><strong>Nota</strong>. Para definir el valor de PI usad la constante PI <code class="language-plaintext highlighter-rouge">Math.PI</code></p>
+</blockquote>
+<blockquote>
+<p><em></em> <strong>Definir constantes en java</strong></p>
+<p><a href="http://lineadecodigo.com/java/constantes-en-java/">http://lineadecodigo.com/java/constantes-en-java/</a></p>
+</blockquote>
+<blockquote>
+<p>Piensa antes de ver la solución</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+
+//Un programa que pida el radio de una circunferencia y muestre su área y su perímetro
+public class Ejemplo6 {
+    public static void main(String argv[]) {
+        int radio;
+
+        System.out.println(&quot;Introduce el radio:&quot;);
+
+        //1- Leer un carácter como int desde el teclado
+        Scanner miScanner = new Scanner(System.in);
+        radio = miScanner.nextInt();
+            miScanner.close();
+        
+        //2. Cálculos
+        float area =  Math.PI * radio * radio;
+            float perimetro = 2 * Math.PI * radio;
+        
+        // 3 Imprimimos
+           System.out.printf(&quot;El área de la circunferencia es: %f %n&quot;, area);
+        System.out.printf(&quot;El perímetro de la circunferencia es: %f %n&quot;,perimetro);
+    }
+}</code></pre>
+<h2 id="7-un-programa-que-pida-el-precio-real-de-un-producto-el-precio-rebajado-y-muestre-el-descuento-realizado">7 Un programa que pida el precio real de un producto, el precio rebajado y muestre el descuento realizado</h2>
+<p><img src="/programacion-java/assets/img/java-basico//ej6b.png" /></p>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+
+//Un programa que pida el precio real de un producto, el precio rebajado y muestre el descuento realizado
+public class Ejemplo7 {
+    public static void main(String argv[]) {
+        float precio;
+        float precioRebajado;
+        float descuento;
+
+        System.out.println(&quot;Introduce el precio:&quot;);
+
+        // 1. Leer un carácter como float desde el teclado
+        Scanner miScanner = new Scanner(System.in);
+        precio = miScanner.nextFloat();
+
+        System.out.println(&quot;Introduce el precio rebajado:&quot;);
+        precioRebajado = miScanner.nextFloat();
+        miScanner.close();
+   
+        // 2. Calcular el descuento
+        descuento = (precio - precioRebajado) / precio * 100;
+
+        // 3. El resultado es un número Float o Double
+        System.out.printf(&quot;El descuento es de: %f %n&quot;, descuento);
+
+
+    }
+}</code></pre>
+<h1 id="estructuras-condicionales-if">Estructuras condicionales (if)</h1>
+<p>La estructura condicional más simple es el <code class="language-plaintext highlighter-rouge">if</code>: se evalúa una condición y en caso de que se cumpla se ejecuta el contenido entre las llaves {}.</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7</code></pre>
+</div>
+</div>
+<pre><code>public static void main(String[] args) {
+   ......
+    if (edad &gt;= 18){
+        System.out.println(&quot;Mayor de edad&quot;);
+    }
+    .....
+}</code></pre>
+<h2 id="8-realiza-un-programa-que-pida-la-edad-al-usuario-y-muestre-un-mensaje-si-es-mayor-de-edad">8 Realiza un programa que pida la edad al usuario y muestre un mensaje si es mayor de <strong>edad</strong></h2>
+<p><img src="/programacion-java/assets/img/java-basico//ej8.png" /></p>
+<h1 id="estructuras-condicionales-if---else">Estructuras condicionales (if - else)</h1>
+<p>En este caso, si no se cumple la condición del <code class="language-plaintext highlighter-rouge">if</code>, ejecuta el código definido en el <code class="language-plaintext highlighter-rouge">else</code></p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9</code></pre>
+</div>
+</div>
+<pre><code>public static void main(String[] args) {
+   ......
+       if (edad &gt;= 18){
+           System.out.println(&quot;Mayor de edad&quot;);
+       }else{
+           System.out.println(&quot;Menor de edad&quot;);
+       }
+    .....
+}</code></pre>
+<h2 id="9-igual-que-el-anterior-pero-que-también-muestre-un-mensaje-si-es-menor-de-edad">9 Igual que el anterior pero que también muestre un mensaje si es menor de edad</h2>
+<p><img src="/programacion-java/assets/img/java-basico//ej9.png" /></p>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+
+//Realiza un programa que pida la edad al usuario y muestre un mensaje si es mayor de edad
+public class Ejemplo9 {
+    public static void main(String argv[]) {
+        int edad;
+        Scanner miScanner = new Scanner(System.in);
+
+        System.out.println(&quot;Introduce tu edad:&quot;);
+
+        // Leer un carácter como int desde el teclado  
+        edad = miScanner.nextInt();
+        miScanner.close();
+
+        // Si las condiciones son mutuamente excluyentes, se usa if .. else
+        if (edad &gt;= 18) {
+            System.out.println(&quot;Eres mayor de edad&quot;);
+        } else {
+            System.out.println(&quot;Eres menor de edad&quot;);
+        }
+
+        
+    }
+}</code></pre>
+<h2 id="10-diseña-un-algoritmo-que-lea-un-valor-y-muestre-si-es-positivo-o-negativo-0-es-positivo">10 Diseña un algoritmo que lea un valor y muestre si es positivo o negativo (0 es positivo)</h2>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+
+//Diseña un algoritmo que lea un valor y muestre si es positivo o negativo (0 es positivo)
+public class Ejemplo10 {
+    public static void main(String argv[]) {
+        int numero;
+        Scanner miScanner = new Scanner(System.in);
+        System.out.println(&quot;Introduce un número entero:&quot;);
+
+        // Leer un carácter como int desde el teclado
+        numero = miScanner.nextInt();
+        miScanner.close();
+        
+        //Si las condiciones son mutuamente excluyentes, se usa if .. else
+        if (numero &gt;= 0) {
+            System.out.println(&quot;El número es positivo&quot;);
+        } else {
+            System.out.println(&quot;El número es negativo&quot;);
+        }    
+    }
+}</code></pre>
+<h2 id="11-diseña-un-algoritmo-que-lea-dos-valores-y-los-muestre-en-orden-ascendente">11 Diseña un algoritmo que lea dos valores y los muestre en orden ascendente.</h2>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+
+//Diseña un algoritmo que lea dos valores y los muestre en orden ascendente.
+public class Ejemplo11 {
+    public static void main(String argv[]) {
+        int numero;
+        int numero2;
+        Scanner miScanner = new Scanner(System.in);
+        
+        // Leer un carácter como int desde el teclado
+        System.out.println(&quot;Introduce un número entero:&quot;);
+        numero = miScanner.nextInt();
+        System.out.println(&quot;Introduce otro número entero:&quot;);
+        numero2 = miScanner.nextInt();
+        miScanner.close();
+        
+        // Si las condiciones son mutuamente excluyentes, se usa if .. else
+        if (numero &lt; numero2) {
+            System.out.println(numero + &quot; - &quot; + numero2);
+        } else {
+            System.out.println(numero2 + &quot; - &quot; + numero);
+        }
+        
+        
+    }
+}</code></pre>
+<h2 id="12-diseña-un-algoritmo-que-lea-dos-valores-y-muestre-el-más-grande-de-ellos">12 Diseña un algoritmo que lea dos valores y muestre el más grande de ellos.</h2>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+
+//Diseña un algoritmo que lea dos valores y muestre el más grande de ellos.
+public class Ejemplo12 {
+    public static void main(String argv[]) {
+        int numero;
+        int numero2;
+        Scanner miScanner = new Scanner(System.in);
+        
+        System.out.println(&quot;Introduce un número entero:&quot;);
+        numero = miScanner.nextInt();
+        
+        System.out.println(&quot;Introduce otro número entero:&quot;);
+        numero2 = miScanner.nextInt();
+        miScanner.close();
+        // Si las condiciones son mutuamente excluyentes, se usa if .. else
+        if (numero &gt; numero2) {
+            System.out.println(&quot;El número más grande es: &quot; + numero);
+        } else {
+            System.out.println(&quot;El número más grande es: &quot; + numero2);
+        }
+        
+        //Otra forma de hacerlo es con el operador ternario
+        //(condition ? exprTrue : exprFalse). 
+        System.out.println(&quot;El número más grande es: &quot; + ((numero &gt; numero2) ? numero : numero2));
+    }
+}</code></pre>
+<h2 id="13-realiza-un-programa-que-lea-dos-valores-y-los-orden-ascendente-o-descendentemente-según-elija-el-usuario">13 Realiza un programa que lea dos valores y los orden ascendente o descendentemente según elija el usuario.</h2>
+<p>En este caso necesitamos <em>acordarnos</em> de tres cosas:</p>
+<ul>
+<li>Los dos números a comparar</li>
+<li>El orden (por ejemplo: 1 para Ascendente y otro cualquiera para descendente)</li>
+<li>Para hacer el programa sigue estas fases:
+<ol>
+<li>Lee los datos del teclado</li>
+<li>Ahora haz el algoritmo para cuando el orden es Ascendente</li>
+<li>Una vez te funcione, crea la sentencia <code class="language-plaintext highlighter-rouge">if</code> y ahora realiza la sentencia <code class="language-plaintext highlighter-rouge">else</code> para ordenar descendentemente.</li>
+<li>Comprueba que todo funciona bien.</li>
+</ol></li>
+</ul>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+
+//Realiza un programa que lea dos valores y los orden ascende o descentemente según elija el usuario.
+public class Ejemplo13 {
+    public static void main(String argv[]) {
+        int numero;
+        int numero2;
+        int orden;
+        Scanner inputValue = new Scanner(System.in);
+        
+        System.out.println(&quot;Introduce un número entero:&quot;);
+        numero = inputValue.nextInt();
+
+        System.out.println(&quot;Introduce otro número entero:&quot;);
+        numero2 = inputValue.nextInt();
+        
+        System.out.println(&quot;¿Cómo lo quieres ordenar?: 1 - Ascendente; 2 - Descendente&quot;);
+        orden = inputValue.nextInt();
+        inputValue.close();
+        
+        if (1 == orden) {
+            if (numero &gt; numero2) {
+                System.out.println(numero2 + &quot; &quot; + numero);
+            } else {
+                System.out.println(numero + &quot; &quot; + numero2);
+            }
+        } else {
+            if (numero &gt; numero2) {
+                System.out.println(numero + &quot; &quot; + numero2);
+            } else {
+                System.out.println(numero2 + &quot; &quot; + numero);
+            }
+            
+        }
+    }
+}</code></pre>
+<h1 id="la-sentencia-else-if">La sentencia <code class="language-plaintext highlighter-rouge">else if</code></h1>
+<p>Puede ser que haya más de una condición. En este caso se usan tantos bloques <code class="language-plaintext highlighter-rouge">else if</code> como condiciones haya:</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9</code></pre>
+</div>
+</div>
+<pre><code>int time = 22;
+if (time &lt; 10) {
+  System.out.println(&quot;Good morning.&quot;);
+} else if (time &lt; 20) {
+  System.out.println(&quot;Good day.&quot;);
+} else {
+  System.out.println(&quot;Good evening.&quot;);
+}
+// Outputs &quot;Good evening.&quot;</code></pre>
+<blockquote>
+<p><em></em> Más info en <a href="https://www.w3schools.com/java/java_conditions.asp">https://www.w3schools.com/java/java_conditions.asp</a></p>
+</blockquote>
+<h2 id="14-diseña-un-algoritmo-que-lea-un-valor-numérico-entero-correspondiente-a-la-nota-de-un-examen-y-muestre-su-valor-en-letra">14 Diseña un algoritmo que lea un valor numérico entero correspondiente a la nota de un examen y muestre su valor en letra:</h2>
+<p>de 0 a 3 Muy Deficiente.</p>
+<p>de 3 a 5 Insuficiente.</p>
+<p>de 5 a 6 Suficiente.</p>
+<p>de 6 a 7 Bien</p>
+<p>de 7 a 9 Notable</p>
+<p>de 9 a 10 Sobresaliente</p>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+
+//Diseña un algoritmo que lea un valor numérico 
+//entero correspondiente a la nota de un examen y muestre su valor en letra
+public class Ejemplo14 {
+    public static void main(String argv[]) {
+        int nota;
+        Scanner miScanner = new Scanner(System.in);
+        
+        System.out.println(&quot;Introduce el valor de la nota entera:&quot;);
+        nota = miScanner.nextInt();
+        miScanner.close();
+        
+        // Si las condiciones son mutuamente excluyentes, se usa if .. else if ...
+        if ((nota &lt; 0) || (nota &gt; 10)) {
+            System.out.println(&quot;Nota inválida&quot;);
+        }else if (nota &lt; 3) {
+            System.out.println(&quot;Muy deficiente&quot;);
+        }else if (nota &lt; 5 ) {
+            // No hace falta que comprobemos que es mayor que 3, porque si lo fuera
+            // habría entrado por el if (nota &lt; 3) {
+            System.out.println(&quot;Insuficiente&quot;);
+        }else if (nota &lt; 6 ) {
+            System.out.println(&quot;Suficiente&quot;);
+        }else if (nota &lt; 7 ) {
+            System.out.println(&quot;bien&quot;);
+        }else if (nota &lt; 9 ) {
+            System.out.println(&quot;Notable&quot;);
+        }else {
+            System.out.println(&quot;Sobresaliente&quot;);
+        }
+    }
+}</code></pre>
+<blockquote>
+<p><em></em> Fíjate en la condición</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>if ((nota &lt; 0) || (nota &gt; 10)) {</code></pre>
+<p><code class="language-plaintext highlighter-rouge">||</code> es un operador de comparación que significa <strong>O</strong>. En este caso si la nota es menor que 0 <strong>O</strong> mayor que 10, se trata de un error</p>
+<p>Más info sobre operadores en <a href="https://www.w3schools.com/java/java_operators.asp">https://www.w3schools.com/java/java_operators.asp</a></p>
+<h1 id="estructuras-de-decisión-múltiple">Estructuras de decisión múltiple</h1>
+<p>Hay momentos en los que desea comprobar una serie de condiciones y ejecutar código diferente dependiendo de la condición.</p>
+<p>Una forma de hacerlo es con la lógica <code class="language-plaintext highlighter-rouge">if / else</code>, como el siguiente ejemplo:</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17</code></pre>
+</div>
+</div>
+<pre><code>int x = 1;
+
+int y = 2;
+
+if (UN_ENTERO == x){
+
+//HACER ALGO
+
+}else if (UN_ENTERO == y){
+
+//HACER OTRA COSA
+
+}else{
+
+//CONDICIÓN POR DEFECTO
+
+}</code></pre>
+<p>Esto funciona, sin embargo existe otra estructura que nos permite hacer lo mismo. Las sentencias <code class="language-plaintext highlighter-rouge">switch</code> permiten al programador ejecutar ciertos bloques de código dependiendo de condiciones exclusivas. El siguiente ejemplo muestra cómo se puede usar una sentencia <code class="language-plaintext highlighter-rouge">switch</code>:</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17</code></pre>
+</div>
+</div>
+<pre><code>int x = 1;
+int y = 2;
+
+switch (UN_ENTERO o un String o un char)
+{
+   case x:
+      //HACER ALGO;
+      break;
+
+   case y: 
+      //HACER OTRA COSA 
+      break;
+
+   default:
+      //CONDICIÓN POR DEFECTO
+      break;
+}</code></pre>
+<p>Hay que hacer notar que la condición swith sólo admite un char o un entero<br />
+<img src="/programacion-java/assets/img/java-basico//switch.png" /></p>
+<p>Os dejo un vídeo del canal de <a href="https://www.youtube.com/channel/UCdulIs-x_xrRd1ezwJZR9ww">Píldoras Informáticas</a></p>
+<h2 id="15-realiza-un-programa-que-lea-un-número-entero-del-1-al-10-y-que-muestre-su-valor-en-letra">15 Realiza un programa que lea un número entero del 1 al 10 y que muestre su valor en letra.</h2>
+<p>En este programa sólo nos hemos de <em>acordar</em> de un dato: la nota. Dependiendo de la nota imprimiremos una cadena u otra. Como hay 10 opciones mutuamente excluyentes es más sencillo usar un <code class="language-plaintext highlighter-rouge">switch</code> que un conjunto de <code class="language-plaintext highlighter-rouge">if-else if-...</code></p>
+<blockquote>
+<p><em></em> <strong>Cuidado</strong></p>
+<p>En la condición <code class="language-plaintext highlighter-rouge">case</code> <strong>sólo</strong> se permiten valores escalares, es decir, no se puede escribir:</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>case &lt;= 3:</code></pre>
+<p>Para simular este caso (que es un tema más avanzado) se haría así:</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7</code></pre>
+</div>
+</div>
+<pre><code>case 1:
+case 2:
+case 3:
+    System.out.println(&quot;Entre uno y tres&quot;);
+    break:
+case 4:
+    ....</code></pre>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+
+//realiza un programa que lea un número entero del 1 al 10 y que muestre su valor en letra:
+public class Ejemplo15 {
+    public static void main(String argv[]) {
+        int numero;
+        Scanner miScanner = new Scanner(System.in);
+        
+        System.out.println(&quot;Introduce un número del 1 al 10:&quot;);
+        numero = miScanner.nextInt();
+        miScanner.close();
+        
+        switch (numero) {
+        case 1:
+            System.out.println(&quot;Uno&quot;);
+            //Importante usar break para que no continúe ejecuntando la siguiente instrucción 
+            break;
+        case 2:
+            System.out.println(&quot;Dos&quot;);
+            break;
+        case 3:
+            System.out.println(&quot;Tres&quot;);
+            break;
+        case 4:
+            System.out.println(&quot;Cuatro&quot;);
+            break;
+        case 5:
+            System.out.println(&quot;Cinco&quot;);
+            break;
+        case 6:
+            System.out.println(&quot;Seis&quot;);
+            break;
+        case 7:
+            System.out.println(&quot;Siete&quot;);
+            break;
+        case 8:
+            System.out.println(&quot;Ocho&quot;);
+            break;
+        case 9:
+            System.out.println(&quot;Nueve&quot;);
+            break;
+        case 10:
+            System.out.println(&quot;Diez&quot;);
+            break;
+        default:
+            System.out.println(&quot;El número debe estar comprendido entre 0 y 10&quot;);
+        }
+    }
+}</code></pre>
+<h2 id="16-realiza-un-programa-que-lea-dos-números-enteros-y-dependiendo-de-la-operación-que-indique-el-usuario-------muestre-el-resultado">16 Realiza un programa que lea dos números enteros y dependiendo de la operación que indique el usuario (+, -, * , /) muestre el resultado</h2>
+<p>En este caso nos hemos de <em>acordar</em> de tres cosas:</p>
+<ul>
+<li><p>Dos números (por ejemplo, de tipo <code class="language-plaintext highlighter-rouge">int</code>)</p></li>
+<li><p>Una operación (en este caso usaremos el tipo <code class="language-plaintext highlighter-rouge">string</code>). Para leer un dato de tipo <code class="language-plaintext highlighter-rouge">String</code> usamos el método <code class="language-plaintext highlighter-rouge">inputValue.next()</code></p>
+<blockquote>
+<p><em></em> Aquí va el código para la operación <code class="language-plaintext highlighter-rouge">+</code></p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9</code></pre>
+</div>
+</div>
+</blockquote></li>
+</ul>
+<p>Como la operación a realizar es <strong>mutuamente excluyente</strong> usaremos un bloque <code class="language-plaintext highlighter-rouge">if-else if</code> o un bloque <code class="language-plaintext highlighter-rouge">switch</code>, el que más rabia te dé.</p>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+
+//Realiza un programa que lea dos números enteros y 
+// dependiendo de la operación que indique el usuario (+, -, * , /) muestre el resultado
+public class Ejemplo16 {
+    public static void main(String argv[]) {
+        int n;
+        int m;
+        String operacion;
+        String cadena; 
+        Scanner inputValue  = new Scanner(System.in);
+
+
+        // Leer un carácter como int desde el teclado
+        System.out.println(&quot;Introduce un número entero:&quot;);
+        n = inputValue.nextInt();
+
+        System.out.println(&quot;Introduce otro número entero:&quot;);
+        m = inputValue.nextInt();
+        
+        System.out.println(&quot;Introduce la operación a realizar (+, -, *, /):&quot;);
+        operacion = inputValue.next();
+        switch (operacion) {
+            /* Fíjate que usamos dobles comillas &quot; porque es de tipo String */
+        case &quot;+&quot;:          
+            System.out.printf(&quot;El resultado de sumar %d y %d es: %d %n&quot;, n, m, n+m);
+            break;
+        case &quot;-&quot;:
+            System.out.printf(&quot;El resultado de restar %d y %d es: %d %n&quot;, n, m, n-m);
+            break;
+        case &quot;*&quot;:
+            System.out.printf(&quot;El resultado de multiplicar %d y %d es: %d %n&quot;, n, m, n*m);
+            break;
+        case &quot;/&quot;:
+            System.out.printf(&quot;El resultado de dividir %d y %d es: %d %n&quot;, n, m, n/m);
+            break;
+        default:
+            System.out.println(&quot;Operación incorrecta&quot;);
+        }
+        //También se puede hacer así. Leyendo sólo el primer carácter de la cadena
+        char op;
+        
+        System.out.println(&quot;Introduce la operación a realizar (+, -, *, /):&quot;);
+        //Leemos toda una cadena
+        cadena = inputValue.next();
+        // y nos quedamos con el carácter 0 (el primero)
+        op = cadena.charAt(0);
+         
+        switch (op) {
+            /* Fíjate que usamos comilla simple ` porque es de tipo char */
+        case &#39;+&#39;:
+            System.out.printf(&quot;El resultado de sumar %d y %d es: %d %n&quot;, n, m, n+m);
+            break;
+        case &#39;-&#39;:
+            System.out.printf(&quot;El resultado de restar %d y %d es: %d %n&quot;, n, m, n-m);
+            break;
+        case &#39;*&#39;:
+            System.out.printf(&quot;El resultado de multiplicar %d y %d es: %d %n&quot;, n, m, n*m);
+            break;
+        case &#39;/&#39;:
+            System.out.printf(&quot;El resultado de dividir %d y %d es: %d %n&quot;, n, m, n/m);
+            break;
+        default:
+            System.out.println(&quot;Operación incorrecta&quot;);
+        }
+
+        // Y también se puede hacer con un bloque if-else-if
+        if (&#39;+&#39; == op)
+            System.out.printf(&quot;El resultado de sumar %d y %d es: %d %n&quot;, n, m, n+m);
+        else if (&#39;-&#39; == op)
+            System.out.printf(&quot;El resultado de restar %d y %d es: %d %n&quot;, n, m, n-m);
+        else if (&#39;*&#39; == op)
+            System.out.printf(&quot;El resultado de multiplicar %d y %d es: %d %n&quot;, n, m, n*m);
+        else if (&#39;/&#39; == op)
+            System.out.printf(&quot;El resultado de dividir %d y %d es: %d %n&quot;, n, m, n/m);
+        else 
+            System.out.println(&quot;Operación incorrecta&quot;);
+
+        inputValue.close();
+    }
+}</code></pre>
+<h2 id="17-realiza-un-programa-que-pida-al-usuario-un-mes-e-imprima-el-número-de-días-que-tiene">17 Realiza un programa que pida al usuario un mes e imprima el número de días que tiene.</h2>
+<p>En este caso es más sencillo usar un bloque <code class="language-plaintext highlighter-rouge">switch</code>, por ejemplo:</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8</code></pre>
+</div>
+</div>
+<pre><code>switch (mes){
+    case 1:
+    case 3:
+    ....
+        System.out.print(&quot;Tiene 31 días : &quot;);
+        break;
+    case 2:
+            .....</code></pre>
+<p>Y, de momento, vamos a suponer que no hay años bisiestos!</p>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+
+//Realiza un programa que pida al usuario un mes e imprima el número de días que tiene.
+public class Ejemplo17 {
+    public static void main(String argv[]) {
+        int mes;
+        Scanner miScanner = new Scanner(System.in);
+        
+        // Leer un carácter como int desde el teclado
+        System.out.println(&quot;Introduce un mes :&quot;);
+        mes = miScanner.nextInt();
+        miScanner.close();
+        
+        //En este caso tenemos un switch que imprime lo mismo para varios casos
+        switch (mes) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            System.out.println(&quot;El mes tiene 31 días&quot;);
+            break;            
+        case 2:
+            System.out.println(&quot;El mes tiene 28 o 29 días&quot;);
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            System.out.println(&quot;El mes tiene 30 días&quot;);
+            break;
+        default:
+            System.out.println(&quot;Mes incorrecto&quot;);
+        }
+
+    }
+}</code></pre>
+<h2 id="18-diseña-un-algoritmo-que-recibe-horas-minutos-y-segundos-y-muestra-horas-minutos-y-segundos-resultantes-de-la-adición-de-un-segundo">18 Diseña un algoritmo que recibe horas, minutos y segundos y muestra horas, minutos y segundos resultantes de la adición de un segundo.</h2>
+<p>Este problema parece trivial, ¿no?. Cojo una horas, minutos, segundos y el sumo 1. Y si resulta que ahora tengo 60 segundos? ¿Y si ahora tengo 60 minutos? Ya no parece tan simple. Pero seguro que en tu cabeza lo ves claro. El problema es que todavía no tienes práctica en traducir tus pensamientos a código. Poco a poco. Al memos haz el algoritmo para sumar un minuto si los segundos suman 60 ahora.</p>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+
+//Diseña un algoritmo que recibe horas, minutos y segundos y 
+// muestra horas, minutos y segundos resultantes de la adición de un segundo.
+public class Ejemplo18 {
+    public static void main(String argv[]) {
+        int horas;
+        int minutos;
+        int segundos;
+        Scanner miScanner = new Scanner(System.in);
+        
+        System.out.println(&quot;Introduce las horas:&quot;);
+        horas = miScanner.nextInt();
+        
+        System.out.println(&quot;Introduce los minutos:&quot;);
+        minutos = miScanner.nextInt();
+        
+        System.out.println(&quot;Introduce los segundos:&quot;);
+        segundos = miScanner.nextInt();
+        miScanner.close();
+        
+        //Añadimos un segundo
+        segundos = segundos + 1; // o segundos++
+        
+        //Si al sumar un segundo, llegamos a 60 significa que hemos de aumentar un minuto
+        if (60 == segundos) {
+            minutos++;
+            segundos = 0;
+            //Si ahora los minutos son 60, hemos de aumentar una hora      
+            if (60 == minutos) {
+                horas++;
+                minutos = 0;
+                //Si ahora las horas son 24, la ponemos a 0 (ha pasado un día)
+                if (24 == horas) {
+                    horas = 0;
+                }
+            }
+        }
+        
+        System.out.printf(&quot;Ahora son %d:%d:%d %n&quot;, horas, minutos, segundos);
+    }
+}
+</code></pre>
+<h2 id="19-diseña-un-algoritmo-que-calcule-el-salario-neto-de-un-trabajador-en-función-del-número-de-horas-de-trabajo-y-los-impuestos-según-las-siguientes-reglas">19 Diseña un algoritmo que calcule el salario neto de un trabajador en función del número de horas de trabajo y los impuestos según las siguientes reglas:</h2>
+<ul>
+<li>Las primeras 35 horas se pagan al precio normal por hora</li>
+<li><p>Las horas que exceden esas 35 horas se pagan 1,5 veces el precio normal.</p>
+<p>Las tasas impositivas son:</p></li>
+<li><p>Los primeros 500 € son libres de impuestos.</p></li>
+<li><p>los próximos 400 € tienen un impuesto del 25%</p></li>
+<li>Y el resto una tasa de impuestos del 45%.</li>
+</ul>
+<p>Los datos de entrada son:</p>
+<ul>
+<li>€ precio por hora</li>
+<li>número de horas.</li>
+</ul>
+<p>Datos resultantes:</p>
+<ul>
+<li>Pago bruto</li>
+<li>Salario neto</li>
+<li>Impuestos</li>
+</ul>
+<blockquote>
+<p><em></em> Ya hemos visto que un programa hay que descomponerlo en partes. Fíjate que se calculan tres datos que son dependientes. ( y cada cálculo individual es relativamente sencillo, ¿no?). Pues hacer todo el programa es la suma de hacer tres pequeños programas. Parece sencillo</p>
+<p>Primero piensa bien el problema. A continuación haz cálculos en una hoja de cálculo. Parece mentira pero cuando programas echas mano de papel, calculadora, … ¡No lo haces todo en la cabeza!</p>
+<p>Ahora calcula el salario bruto. Una vez funcione, calcula el salario neto. Y, por último, los impuestos</p>
+</blockquote>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+public class Ejemplo19 {
+    public static void main(String argv[]) {
+        int horas;
+        float precio;
+        float bruto;
+        float impuestos;
+        Scanner miScanner = new Scanner(System.in);
+        /* Habitualmente, los programas se dividen en 3 partes:
+         * 1.- Recoger datos
+         * 2.- Procesarlos
+         * 3.- Imprimir resultados
+         * Estas 3 partes deben estar diferenciadas, es decir, en la parte de proceso no
+         * imprimimos nada, sólo hacemos cálculos
+         */
+        
+        /*
+         * 1.- RECOGER DATOS 
+         */
+        //Suponemos que el usuario introduce datos correctos
+        System.out.println(&quot;Introduce las horas:&quot;);
+        horas = miScanner.nextInt();
+        
+        System.out.println(&quot;Introduce el precio por hora:&quot;);
+        precio = miScanner.nextFloat();
+        miScanner.close();
+    
+        /*
+         * 2.- PROCESAR DATOS 
+         */
+        
+        /*
+         *  Primero calculamos el pago bruto.
+         *  Las primeras 35 horas se pagan al precio normal por hora
+         *  Las horas que exceden esas 35 horas se pagan 1,5 veces el precio normal.
+         */
+        if (horas &lt;= 35) {
+            bruto = horas * precio;
+        }else {
+            //Las primeras 35 se pagan normal
+            bruto = 35 * precio;
+            //Las siguientes se pagan a 1,5 veces el precio normal
+            bruto += (horas - 35) * precio * 1.5f;
+        }
+        /*
+         * Ahora calculamos los impuestos:
+         *   Los primeros 500 € son libres de impuestos.
+         *   los próximos 400 € tienen un impuesto del 25%
+         *   Y el resto una tasa de impuestos del 45%.
+         */
+        if (bruto &lt;= 500) {
+            impuestos = 0;
+        }else if (bruto &lt;= 900){
+            //Cobra entre 500 y 900, de los primeros 500 no paga nada
+            impuestos = (bruto - 500) * 0.25f;
+        }else {
+            //Si cobra más de 900
+            impuestos = (400 * 0.25f) + (bruto - 500 - 400) * 0.45f;
+        }
+        
+        /*
+         * 3.- IMPRIMIR RESULTADOS
+         */
+        
+        System.out.println(&quot;Pago bruto: &quot; + bruto);
+        System.out.println(&quot;Salario neto: &quot; + (bruto - impuestos));
+        System.out.println(&quot;Impuestos: &quot; + impuestos);
+        
+    }
+}</code></pre>
+<h2 id="20-precio-final">20 Precio final</h2>
+<p>Un cierto comercio hace un descuento dependiendo del precio de cada producto. Si el precio es inferior a 6 euros no hay descuento. Si es mayor o igual a 6 euros y menos de 60 €, se aplica un 5% de descuento, y si es mayor o igual a 60 € se aplica un 10% de descuento. Diseña el algoritmo para calcular el precio final.</p>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+
+public class Ejemplo20 {
+    /*
+     * Un cierto comercio hace un descuento dependiendo del precio de cada producto.
+    Si el precio es inferior a 6 euros no hay descuento. Si es mayor o igual a 6 euros
+    y menos de 60 €, se aplica un 5% de descuento, y si es mayor o igual a 60 € se aplica
+    un 10% de descuento. Diseña el algoritmo para calcular el precio final.
+     */
+    public static void main(String[] args) {
+        float precio;
+        float descuento;
+        Scanner miScanner = new Scanner(System.in);
+
+        /*
+         * 1.- RECOGER DATOS 
+         */
+        System.out.println(&quot;Introduce el precio:&quot;);
+        precio = miScanner.nextFloat();
+        miScanner.close();
+
+        /*
+         * 2.- PROCESAR DATOS 
+         */
+        if (precio &lt; 6) {
+            descuento = 0;
+        }else if(precio &lt; 60) {
+            descuento = precio * 0.05f;
+        }else {
+            descuento = precio * 0.10f;
+        }
+        
+        /*
+         * 3.- IMPRIMIR RESULTADOS
+         */
+        System.out.println(&quot;El precio final es: &quot; + (precio - descuento) + &quot; €&quot;);
+    }
+}</code></pre>
+<h2 id="21-año-bisiesto">21 Año bisiesto</h2>
+<p>Diseña un algoritmo que lea un año como dato de entrada y que muestre si es un año bisiesto o no. Todos los múltiplos de 400 o los que son múltiples de 4 pero no de 100 son bisiestos.</p>
+<p>(Ej. Años bisiestos: 1600, 2000, 2400, 2024. No años bisiestos: 1700, 1800, 1900, 2021..)</p>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+public class Ejemplo21 {
+    public static void main(String[] args) {
+        int anyo;
+        /*
+         * Este tipo de variables se llaman banderas o flags, y sirven para marcar situaciones
+         * En este caso, queremos probar que un año es bisiesto, por lo que en principio suponemos
+         * que no lo es
+         */
+        boolean esBisiesto = false;
+        Scanner miScanner = new Scanner(System.in);
+        /*
+         * 1.- RECOGER DATOS 
+         */
+        System.out.println(&quot;Introduce un año:&quot;);
+        anyo = miScanner.nextInt();
+        miScanner.close();
+
+        /*
+         * 2.- PROCESAR DATOS 
+         * Resumiendo: Si el año es múltiplo de 400 (que entonces también lo es de 100 y 4), es bisiesto
+         *              O el año es múltiplo de 4 pero no de 100
+         */
+        if ((anyo % 400 == 0 ) || ((anyo % 4 == 0 ) &amp;&amp; (anyo % 100 != 0 ))) {
+            //Cambiamos la bandera
+            esBisiesto = true;
+        }
+    
+        /*
+         * 3.- IMPRIMIR RESULTADOS
+         */
+        if (esBisiesto) {
+             System.out.println(&quot;Es bisiesto&quot;);
+        }else {
+             System.out.println(&quot;No es bisiesto&quot;);
+        }
+
+    }
+}</code></pre>
+<blockquote>
+<p><em></em> En este programa hemos usado un tipo de variable llamada <strong>bandera (flag)</strong>, que se fija a false y luego a true si se cumple alguna condición.</p>
+<p>Es este caso hemos supuesto que el año <strong>no es bisiesto</strong> y luego comprobamos si lo es.</p>
+</blockquote>
+<h1 id="estructuras-iterativas-loops">Estructuras Iterativas (loops)</h1>
+<p>Las estructuras iterativas alteran el flujo normal de ejecución de un algoritmo, haciendo posible que un bloque de acciones o instrucciones se ejecuten un cierto número de veces, dependiendo del cumplimiento de una condición. Veremos 3 tipos de iteraciones:</p>
+<ul>
+<li>While</li>
+<li>Until</li>
+<li>For</li>
+</ul>
+<h2 id="while">While</h2>
+<p>Un bloque de acciones se ejecuta mientras una condición se evalúa como verdadera. La condición se evalúa siempre antes de entrar en el bucle, lo que hace posible que el bloque de acciones nunca se ejecutan si la condición se evalúa como falsa al principio.<br />
+A veces, no sabemos de antemano el número de veces que se ejecutará el bucle.<br />
+<img src="/programacion-java/assets/img/java-basico/while.png" /></p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7</code></pre>
+</div>
+</div>
+<pre><code>num = inputValue.nextInt();
+while (num != 0) {
+    if (num &gt;= 0) {
+        positives = positives + 1;
+    }
+    num = inputValue.nextInt();
+}</code></pre>
+<h2 id="until">Until</h2>
+<p>Se ejecuta un bloque de acciones hasta que una condición se evalúa como verdadera. La condición se evalúa siempre al final del bucle, lo que hace que el bloque de acciones se ejecutan al menos una vez.<br />
+A veces, no sabemos de antemano el número de veces que se ejecutará el bucle.<br />
+<img src="/programacion-java/assets/img/java-basico/until.png" /></p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6</code></pre>
+</div>
+</div>
+<pre><code>do {
+    num = inputValue.nextInt();
+    if (num &gt;= 0) {
+        positives = positives + 1;
+    }
+}while (num != 0);</code></pre>
+<h2 id="for">For</h2>
+<p>En este tipo de bucle el número de veces que el bloque de instrucciones será ejecutado se conoce de antemano. Es un caso particular de una estructura de While.</p>
+<ul>
+<li>A una variable llamada contador se le asigna un valor inicial.</li>
+<li>La condición se evalúa utilizando ese contador como: contador &lt;= valor_final</li>
+<li>En cada iteración la variable del contador se incrementa por un valor fijo (incremento). <img src="/programacion-java/assets/img/java-basico//for.png" /></li>
+</ul>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6</code></pre>
+</div>
+</div>
+<pre><code>for (int i = 0; i &lt; 10; i++) {
+    num = miScanner.nextInt();
+    if (num &gt;= 0) {
+        positives = positives + 1;
+    }
+}</code></pre>
+<p>Os dejo el vídeo de <a href="https://www.youtube.com/watch?v=HQz8xwAjCsI&amp;list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&amp;index=18">Píldoras Informáticas</a> donde explica los bucles. Mirad además los otros vídeos de la colección a partir de este, donde explica el resto de bucles. Si algo no lo entendéis, haced un <em>salto de fe</em></p>
+<h2 id="22-números-positivos">22 Números positivos</h2>
+<p>Escribe un programa que pida al usuario 10 números y que muestre cuántos son positivos.</p>
+<blockquote>
+<p><em></em> En este caso como sabemos cuántas veces lo hacemos (10) usamos un bucle <code class="language-plaintext highlighter-rouge">for</code></p>
+<p>Además, necesitamos <em>guardar</em> el valor del número de positivos</p>
+</blockquote>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+/*
+ * Escribe un programa que pida al usuario 10 números y que muestre cuántos son positivos
+ */
+public class Ejemplo22 {
+    public static void main(String[] args)
+    {    
+        int numero;
+        /*
+         * La variable &quot;positivos&quot; es un &quot;contador&quot; que se inicializa a 0
+         */
+        int positivos = 0;
+        Scanner miScanner = new Scanner(System.in);
+        
+        System.out.println(&quot;Introduce 10 números enteros&quot;);
+        
+        for (int i = 0; i &lt; 10; i++) {
+            numero = miScanner.nextInt();
+            if (numero &gt;= 0){
+                //Cuando encuentro un positivo, se aumenta la variable de tipo &quot;contador&quot;
+                positivos++;
+            }
+        
+        }
+        miScanner.close();
+        
+        System.out.println(&quot;Ha introducido &quot; + positivos + &quot; números positivos&quot;);
+        System.out.println(&quot;Ha introducido &quot; + (10 - positivos) + &quot; números negativos&quot;);    
+    }
+}</code></pre>
+<blockquote>
+<p><em></em> En este programa hemos usado un tipo de variable llamada <strong>contador (counter)</strong>, que se fija a 0 y se va incrementando si se cumple una condición</p>
+</blockquote>
+<h2 id="23-números-positivos-ii">23 Números positivos II</h2>
+<p>Escribe un programa que pida al usuario n números y que muestre cuántos son positivos (para acabar el programa, el usuario debe introducir el número 0)</p>
+<blockquote>
+<p><em></em> Como de entrada no sabemos cuántas veces se va a hacer el bucle, usamos un <code class="language-plaintext highlighter-rouge">do ... while</code></p>
+</blockquote>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+/*
+ * Escribe un programa que pida al usuario n números y que muestre cuántos son 
+ * positivos (para acabar el programa, el usuario debe introducir el número 0)
+ * 
+ */
+public class Ejemplo23 {
+    public static void main(String[] args)
+    {    
+        int dato;
+        /*
+         * Las dos variables siguientes son de tipo &quot;contador&quot;
+         */
+        int positivos = 0;
+        int cuantos = 0;
+        Scanner miScanner = new Scanner(System.in);
+        
+        System.out.println(&quot;Introduce números enteros (para acabar introduce un 0)&quot;);
+        //Como de entrada no sabemos cuántas veces se va a hacer el bucle, usamos un do ... while
+        do{
+            dato = miScanner.nextInt();
+            if (dato != 0){
+                if (dato &gt; 0){
+                    positivos++;
+                }
+                cuantos++;
+            }
+        }while ( dato != 0);
+        miScanner.close();
+
+        System.out.println(&quot;Ha introducido &quot; + positivos + &quot; números positivos&quot;);
+        System.out.println(&quot;Ha introducido &quot; + (cuantos - positivos) + &quot; números negativos&quot;);
+    }
+}</code></pre>
+<h2 id="24-nota-media">24 Nota media</h2>
+<p>Diseña un algoritmo que lea un conjunto de notas del teclado hasta que se introduzca -1 y muestre la nota media y si había un 10 o no.</p>
+<blockquote>
+<p><em></em> Al igual que antes, como no conocemos cuántas veces se va a realizar (pero al menos se va a realizar una vez) usamos un <code class="language-plaintext highlighter-rouge">do...while</code></p>
+<p>Para calcular la media, hemos de saber la suma de todas las notas y cuántas notas hay.</p>
+<p>Primero calcula la media y luego si hay un 10 o no</p>
+</blockquote>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+/*
+ * Diseña un algoritmo que lea un conjunto de notas del teclado hasta 
+ * que se introduzca -1 y muestre la nota media y si había un 10 o no. 
+ */
+public class Ejemplo24 {
+    public static void main(String[] args)
+    {    
+        int nota;
+        /* Esta variable es un contador */
+        int cuantasNotas = 0;
+        /* sumaNotas es un acumulador, que se inicializa a 0 para la suma, a 1 para la multiplicación
+         */
+        int sumaNotas = 0;
+        /*
+         * hayUnDiez es una variable de tipo bandera
+         */
+        boolean hayUnDiez = false;
+        Scanner miScanner = new Scanner(System.in);
+        
+        System.out.println(&quot;Introduce las notas (enteros) (para acabar introduce un -1)&quot;);
+        //Como de entrada no sabemos cuántas veces se va a hacer el bucle, usamos un do ... while
+        do{
+            nota = miScanner.nextInt();
+            if (nota != -1){
+                sumaNotas += nota; //Equivale a sumaNotas = sumaNotas + nota;
+                cuantasNotas++;
+                if (10 == nota) {
+                    //cambiamos el valor de la bandera
+                    hayUnDiez = true;
+                }
+            }
+        }while ( nota != -1);
+        miScanner.close();
+        
+        System.out.println(&quot;La nota media es &quot; + ((float)sumaNotas / (float)cuantasNotas));
+        
+        if (hayUnDiez) {
+            System.out.println(&quot;Había al menos un 10 en las notas&quot;);
+        }
+    }
+}</code></pre>
+<h2 id="25-factorial">25 Factorial</h2>
+<p>Diseña un programa que calcule el factorial de un número</p>
+<blockquote>
+<p><em></em> En este caso usamos un bucle <code class="language-plaintext highlighter-rouge">for</code> porque conocemos de antemano cuántas veces se debe realizar el algoritmo: el número que introduzca el usuario</p>
+</blockquote>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+/*
+ * Diseña un programa que calcule el factorial de un número
+ */
+public class Ejemplo25 {
+
+    
+    public static void main(String[] args)
+    {    
+        int numero;
+        // factorial es un acumulador, que se inicializa a 1 para la multiplicación 
+        int factorial = 1;
+        
+        Scanner inputValue = new Scanner(System.in);
+        
+        System.out.println(&quot;Introduce un número entero:&quot;);
+        numero = inputValue.nextInt();
+        inputValue.close();
+        
+        //No hace falta empezar en 1, pues 1 * 1 = 1!!
+        for (int i = 2; i &lt;= numero; i++) {
+            //Vamos acumulando el resultado
+            factorial *= i;
+        }
+        
+        System.out.printf(&quot;El factorial de %d es %d&quot;, numero, factorial);
+    }
+}</code></pre>
+<h2 id="26-tabla-de-multiplicar">26 Tabla de multiplicar</h2>
+<p>Escribe un programa que lea un número y escriba su tabla de multiplicación</p>
+<div class="language-plaintext highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10</code></pre>
+</div>
+</div>
+<pre><code>5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+5 x 6 = 30
+5 x 7 = 35
+5 x 8 = 40
+5 x 9 = 45
+5 x 10 = 50</code></pre>
+<blockquote>
+<p><em></em> Aquí también usaremos un bucle <code class="language-plaintext highlighter-rouge">for</code> porque sabemos cuántas veces se va a ejecutar el bucle</p>
+</blockquote>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+public class Ejemplo26 {
+    public static void main(String[] args)
+    {    
+        int numero;       
+        Scanner inputValue = new Scanner(System.in);
+        
+        System.out.println(&quot;Introduce un número entero entre el 1 y el 9:&quot;);
+        numero = inputValue.nextInt();
+        inputValue.close();
+        
+        for (int i = 1; i &lt;= 10; i++) {
+            System.out.printf(&quot;%d x %d = %d %n&quot;, numero, i, (numero * i));
+        }
+    }
+}</code></pre>
+<h2 id="27-impresión-de-números-i">27 Impresión de números I</h2>
+<p>Diseña un algoritmo que lea un número <strong><em>n</em></strong> e imprima esto:</p>
+<div class="language-plaintext highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5</code></pre>
+</div>
+</div>
+<pre><code>1  
+1 2  
+1 2 3  
+...  
+1 2 3 4 5 ... n</code></pre>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+public class Ejemplo27 {
+    public static void main(String[] args)
+    {    
+        int numero;
+        // resultado es un acumulador, que se inicializa a &quot;&quot; para las cadenas
+        String resultado = &quot;&quot;;
+        Scanner miScanner = new Scanner(System.in);
+        
+        System.out.println(&quot;Introduce un número entero:&quot;);       
+        numero = miScanner.nextInt();
+        miScanner.close();
+        
+        for (int i = 1; i &lt;= numero; i++) {
+            //Vamos acumulando el resultado:
+            // 1 
+            // 1 2
+            // 1 2 3 
+            // ...
+            resultado += i + &quot; &quot;;
+            System.out.println(resultado);
+        }        
+    }
+}</code></pre>
+<h2 id="28-números-primos">28 Números primos</h2>
+<p>Escribe un programa que muestre si un número es primo o no.</p>
+<p>Los números primos tienen la siguiente característica: un número primo es solamente divisible por sí mismo y por la unidad, por tanto, un número primo no puede ser par excepto el 2.</p>
+<p>Para saber si un número impar es primo, dividimos dicho número por todos los números impares comprendidos entre 3 y la mitad de dicho número.</p>
+<p>Por ejemplo, para saber si 13 es un número primo basta dividirlo por 3, y 5. Para saber si 25 es número primo se divide entre 3, 5, 7, 9, y 11. Si el resto de la división (operación módulo %) es cero, el número no es primo.</p>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+public class Ejemplo28 {
+    public static void main(String[] args)
+    {    
+        int numero;
+        boolean esPrimo = true;
+        Scanner inputValue = new Scanner(System.in);
+        
+        System.out.println(&quot;Introduce un número entero positivo:&quot;);
+        numero = inputValue.nextInt();
+        inputValue.close();
+
+        if ((numero == 1) || ((numero != 2 ) &amp;&amp; (numero % 2 == 0))) {
+            esPrimo = false;
+        }else{
+            //Sólo lo dividimos por los impares, hasta la mitad del número
+            for(int i=3; i &lt;= (numero / 2); i+=2) {
+                //Si el resto de la multiplicación es 0 es divisible
+                if(numero %i ==0){ 
+                    esPrimo = false;
+                    //Una vez sabemos que no es primo ya podemos salir del bucle
+                    break;
+                }
+            }
+        }
+        if (esPrimo) {
+            System.out.println(&quot;El número &quot; + numero + &quot; es primo&quot;);
+        }else {
+            System.out.println(&quot;El número &quot; + numero + &quot; NO es primo&quot;);
+        }
+    }
+}</code></pre>
+<blockquote>
+<p><em></em> En este programa hemos usado la palabra reservada <code class="language-plaintext highlighter-rouge">break</code> que permite finalizar un bucle. En este caso, cuando sabemos que un número es divisible ya no hace falta continuar el bucle pues ya sabemos la solución: no es primo.</p>
+</blockquote>
+<h2 id="29-números-primos-ii">29 Números primos II</h2>
+<p>Realiza un programa que imprima todos los números primos entre 3 y 100.</p>
+<p>Este caso es una unión del algoritmo anterior pero repetido un número determinado de veces. Por tanto, usamos un bucle <code class="language-plaintext highlighter-rouge">for</code></p>
+<blockquote>
+<p>Piensa antes de mirar</p>
+</blockquote>
+<h2 id="30-palíndromo-avanzado">30 Palíndromo (avanzado)</h2>
+<p>Realiza un programa que averigüe si una palabra o frase es palíndroma. Para averiguar el número de caracteres de una cadena se usa el método <code class="language-plaintext highlighter-rouge">length()</code> y para acceder al carácter iésimo usa la función <code class="language-plaintext highlighter-rouge">chartAt()</code></p>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+public class Ejemplo30 {
+    public static void main(String[] args)
+    {
+        boolean esPalindromo = true;
+        Scanner miScanner = new Scanner(System.in);
+        
+        System.out.println(&quot;Introduzca una cadena:&quot;);
+            
+        String cadena = miScanner.nextLine();
+        miScanner.close();
+        
+        for (int i = 0; i &lt; (cadena.length() / 2); i++) {
+            //Recorremos la mitad de la cadena y comparamos el valor primer valor con el último
+            //el segundo con el penúltimo, etc
+            //En el momento que alguno no coincida ya podemos parar porque la palabra no es palíndroma
+            if (cadena.charAt(i) != cadena.charAt(cadena.length() - i - 1)) {
+                esPalindromo = false;
+                break;
+            }
+        }
+        if (esPalindromo) {
+            System.out.println(&quot;La cadena es palíndroma&quot;);
+        }else {
+            System.out.println(&quot;La cadena NO es palíndroma&quot;);
+        }
+    }
+}</code></pre>
+<p>Fíjate en <code class="language-plaintext highlighter-rouge">cadena.charAt(cadena.length() - i - 1)</code> Es el iésimo carácter empezando por el final. Recuerda que el primer carácter es 0</p>
+<h2 id="31-divisores">31 Divisores</h2>
+<p>Realiza un programa que pida un número natural y escriba sus divisores</p>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+
+public class Ejemplo31 {
+
+    public static void main(String[] args){ 
+        Scanner miScanner = new Scanner(System.in);
+        System.out.println(&quot;Introduce un número entero:&quot;);
+
+        int numero = miScanner.nextInt();
+        miScanner.close();
+            
+        //Hacemos un bucle hasta la mitad del número (un divisor no puede ser mayor que la mitad!)
+        System.out.println(&quot;Divisores de &quot; + numero);
+        //Hay que revisar siempre los límites de los bucles!!
+        for (int i = 1; i &lt;= numero / 2; i++) {
+            if ((numero % i) == 0) {
+                //&quot;\t&quot; imprime un tabulador
+                System.out.println(&quot;\t&quot; + i);
+            }
+        }
+    }
+
+}</code></pre>
+<h2 id="32-fibonacci">32 Fibonacci</h2>
+<p><img src="/programacion-java/assets/img/java-basico//fibonacci.png" /></p>
+<p>Diseña un programa que muestre los primeros 40 términos de la serie de <a href="https://es.wikipedia.org/wiki/Sucesión_de_Fibonacci">Fibonacci</a></p>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>public class Ejemplo32 {
+    public static void main(String[] args) {
+        int fibonacci= 0;
+        
+        int n1 = 1;
+        int n2 = 1;
+        System.out.printf(&quot;1 %n1 %n&quot;);
+        for (int i = 0; i &lt; 40; i++) {
+            fibonacci = n1 + n2;
+            System.out.println(fibonacci);
+            //Ahora intercambiamos los valores, proceso que se llama swap para 
+            //la siguiente iteración
+            n1 = n2;
+            n2 = fibonacci;
+        }
+    }
+}</code></pre>
+<blockquote>
+<p><em></em> Este programa utiliza una técnica usada mucho en programación que se denomina <strong><em>swap</em></strong> y que consiste en intercambiar el valor de dos variables usando una variable auxiliar.</p>
+</blockquote>
+<h2 id="33-número-áureo">33 Número Áureo</h2>
+<p>Modifica el programa anterior para que muestre la relación (división) entre el valor n y el (n - 1) de la serie de Fibonacci (40 veces). Esta es una manera de obtener una aproximación al <a href="https://es.wikipedia.org/wiki/Número_áureo">Número Áureo</a>.</p>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>public class Ejemplo33 {
+    public static void main(String[] args) {
+        
+        int n1 = 1;
+        int n2= 1;
+        int fibonacci;
+        
+        for (int i = 0; i &lt; 40; i++) {
+            fibonacci = n1 + n2;
+            //Como queremos realizar una operación con decimales,
+            //hacemos un cast a double
+            System.out.println((double)fibonacci / (double)n2);
+            n1 = n2;
+            n2 = fibonacci;
+        }
+
+    }
+
+}</code></pre>
+<blockquote>
+<p><em></em> En este ejercicio hemos usado una técnica llamada <code class="language-plaintext highlighter-rouge">cast</code> que consiste en convertir o promocionar un tipo de dato en otro. En este caso estamos convirtiendo un dato de tipo <code class="language-plaintext highlighter-rouge">int</code> en otro de tipo <code class="language-plaintext highlighter-rouge">double</code>. Si no lo hiciéramos así, sólo devolvería un número entero</p>
+</blockquote>
+<h2 id="34-sumas-sucesivas">34 Sumas sucesivas</h2>
+<p>Realiza un programa que calcule la multiplicación de dos números usando el método de las sumas sucesivas</p>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+
+public class Ejemplo34 {
+    public static void main(String[] args)
+    {    
+        Scanner miScanner = new Scanner(System.in);
+        int x;
+        int y;
+        
+        System.out.println(&quot;Introduce un número&quot;);
+        x = miScanner.nextInt();
+        
+        System.out.println(&quot;Introduce otro número&quot;);
+        y = miScanner.nextInt();
+        
+        miScanner.close();
+
+        // La variable `mul` es un acumulador, 
+        // inicializada en este caso al primer número `x`
+        int mul = x;
+        
+        for (int i = 1; i &lt; y; i++) {
+            //Vamos sumando tantas veces como indique `y` 
+            //(es decir, multiplicando)
+            mul += x;
+        }
+        System.out.printf(&quot;%d x %d = %d&quot;, x, y, mul);
+    }
+
+}</code></pre>
+<h2 id="35-restas-sucesivas">35 Restas sucesivas</h2>
+<p>Realiza un programa que calcule el resto de una división usando el método de las restas sucesivas.</p>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+
+public class Ejemplo35 {
+    public static void main(String[] args)
+    {    
+        Scanner miScanner = new Scanner(System.in);
+        
+        int dividendo;
+        int divisor;
+        
+        System.out.println(&quot;Introduce el dividendo&quot;);
+        dividendo = miScanner.nextInt();
+        
+        System.out.println(&quot;Introduce el divisor&quot;);
+        divisor = miScanner.nextInt();
+        
+        miScanner.close();
+        
+        //Resto también es un acumulador, aunque vamos restando
+        int resto = dividendo;
+        while(resto &gt;= divisor){
+            resto -= divisor;
+        }
+        System.out.printf(&quot;El resto de dividir %d entre %d es %d&quot;, dividendo, divisor, resto);
+    }
+
+}</code></pre>
+<h2 id="36-decimal-a-binario-avanzado">36 Decimal a binario (avanzado)</h2>
+<p>Realiza un programa que lea un número entero decimal (máximo 255) e imprima su valor en binario</p>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+
+public class Ejemplo36 {
+
+    public static void main(String[] args) {
+        Scanner miScanner = new Scanner(System.in);
+        int numero, digito;
+        //binario es de tipo acumulador
+        String binario = &quot;&quot;;
+        System.out.println(&quot;Introduce un número entero &gt;= 0: &quot;);
+        numero = miScanner.nextInt();
+        miScanner.close();
+
+        while (numero != 0) {
+            //Cogemos el resto de la división para saber si 
+            //el resultado es el bit 0 o 1
+            digito = numero % 2;
+            binario = digito + binario;
+            //El siguiente número será el cociente
+            //de la división entera
+            numero = numero / 2;
+        }
+        System.out.printf(&quot;Binario: %s&quot;, binario);
+    }
+}</code></pre>
+<h2 id="37-binario-a-decimal-avanzado">37 Binario a decimal (avanzado)</h2>
+<p>Realiza un programa que lea una cadena de números binarios y calcule su valor en decimal</p>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Scanner;
+
+public class Ejemplo37 {
+     public static void main(String[] args){
+            Scanner miScanner = new Scanner(System.in);
+            int decimal = 0;
+            int potencia = 0;
+            
+            /*
+             * En este primera versión deñ algoritmo 
+             * vamos a leer en número como una cadena
+             */
+            System.out.println(&quot;Introduce un número binario &quot;);
+            
+            String binario = miScanner.next();
+            miScanner.close();
+            
+            char bit;
+            //Empezamos por el bit menos significativo (el último)
+            for (int i = binario.length() - 1; i &gt;= 0; i--) {
+                /* El último bit se eleva a 0,
+                 * el antepenúltimo a 1, ...
+                 */
+                bit = binario.charAt(i);
+                potencia = (binario.length() - 1) - i;
+                if (bit == &#39;1&#39;) {
+                    decimal += Math.pow(2, potencia);
+                }
+                
+                //El siguiente código comentado es sin usar variables
+                /*
+                if (binario.charAt(i) == &#39;1&#39;) {
+                    decimal += Math.pow(2, (binario.length() - 1) - i); 
+                }
+                */
+                
+            }
+            System.out.printf(&quot;Método I.- El número %s en binario es %d %n&quot;, binario, decimal);
+            
+          
+            /*
+             * En este segundo método, ahora el binario está en formato decimal (int)
+             * o con binarioEntero = miScaner.nextInt()
+             */
+            int binarioEntero =  Integer.parseInt(binario);
+           
+            decimal = 0;
+            potencia = 0;
+            while (binarioEntero != 0) {
+                //En ultimoDigito tenemos un 0 o un 1
+                int ultimoDigito = binarioEntero % 10;
+                //Lo elevamos a la potencia actual
+                decimal += ultimoDigito * Math.pow(2, potencia);
+                //Aumentamos la potencia
+                potencia++;
+                //Dividimos el número entre 10 (división entera) por lo le quitamos el últmo dígito
+                binarioEntero = binarioEntero / 10;
+            }
+            System.out.printf(&quot;Método II.- El número %s en binario es %d %n&quot;, binario, decimal);
+     }
+}</code></pre>
+<h2 id="38-juego-adivina-un-número--avanzado">38 Juego Adivina un número (avanzado)</h2>
+<p>Diseña un algoritmo para jugar a “adivinar un número”. El algoritmo generará un número <em>aleatorio</em> entre 1 y 100, que llamaremos el número secreto, y le pedirá al jugador que introduzca un número hasta que gane o un -1 para rendirse:</p>
+<ul>
+<li>Si el número es igual al número secreto, mostrará “Has Ganado” en la pantalla y terminará</li>
+<li>Si el número introducido es mayor que el número secreto, mostrará “El número secreto es más pequeño” y le pedirá que introduzca otro.</li>
+<li>Si el número introducido es menor que el número secreto, mostrará “El número secreto es más grande” y le pedirá que introduzca otro.</li>
+<li>Si el número introducido es -1, mostrará “Se rinde” y terminará</li>
+</ul>
+<p>Para generar un número aleatorio usa este código.</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5</code></pre>
+</div>
+</div>
+<pre><code>import java.util.Random;
+---
+Random aleatorio = new Random(System.currentTimeMillis());
+// Producir nuevo int aleatorio entre 0 y 99
+int secreto = aleatorio.nextInt(100);</code></pre>
+<p>Como no sabemos cuántas veces se va a realizar el bucle, usamos un <code class="language-plaintext highlighter-rouge">do..while</code></p>
+<blockquote>
+<p>Piensa antes de mirar</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>import java.util.Random;
+import java.util.Scanner;
+
+public class Ejemplo38 {
+    public static void main(String[] args) {
+        Scanner miScanner = new Scanner(System.in);
+        
+        int numero = -1;
+        
+        boolean haGanado = false;
+        
+        Random aleatorio = new Random(System.currentTimeMillis());
+        // Producir nuevo int aleatorio entre 0 y 99
+        int secreto = aleatorio.nextInt(100);
+        do {
+            System.out.println(&quot;Introduce un número (-1 para rendirse)&quot;);
+            numero = miScanner.nextInt();
+
+            if (numero != -1) {
+                if (numero &gt; secreto) {
+                    System.out.println(&quot;El número secreto es más pequeño&quot;);
+                }else if (numero &lt; secreto) {
+                    System.out.println(&quot;El número secreto es más grande&quot;);
+                }else {
+                    System.out.println(&quot;Has Ganado&quot;);
+                    haGanado = true;
+                }
+            }else {
+                System.out.println(&quot;Se rinde&quot;);
+            }
+        } while (!haGanado &amp;&amp; (numero != -1));
+        
+        miScanner.close();
+    }
+}</code></pre>
+<blockquote>
+<p><em></em> Este programa es el típico en el que se aprecia la descomposición de un algoritmo en partes más sencillas.</p>
+<p>Si analizas el código, verás que solo usas estructuras ya conocidas.</p>
+<p>El problema es que no sabéis descomponerlo en partes y esto es muy complicado de enseñar. Sólo la práctica te hará maestro.</p>
+<p>El primer paso sería empezar a generar un número aleatorio. Como no sé, pues busco en Internet <code class="language-plaintext highlighter-rouge">java random</code></p>
+<p>El segundo paso sería generar el bucle que lee. Ya sabemos que debe ser <code class="language-plaintext highlighter-rouge">do..while</code> porque no sabemos cuántas veces se repite pero sabemos que al menos se va a realizar una vez</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5</code></pre>
+</div>
+</div>
+</blockquote>
+<pre><code>do {
+    System.out.println(&quot;Introduce un número (-1 para rendirse)&quot;);
+    numero = miScanner.nextInt();
+
+} while (numero != -1);</code></pre>
+<p>Y por último, completaríamos el algoritmo del bucle</p>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17</code></pre>
+</div>
+</div>
+<pre><code>do {
+    System.out.println(&quot;Introduce un número (-1 para rendirse)&quot;);
+    numero = miScanner.nextInt();
+
+    if (numero != -1) {
+        if (numero &gt; secreto) {
+            System.out.println(&quot;El número secreto es más pequeño&quot;);
+        }else if (numero &lt; secreto) {
+            System.out.println(&quot;El número secreto es más grande&quot;);
+        }else {
+            System.out.println(&quot;Has Ganado&quot;);
+            haGanado = true;
+        }
+    }else {
+        System.out.println(&quot;Se rinde&quot;);
+    }
+} while (!haGanado &amp;&amp; (numero != -1));</code></pre>
+<div class="body-blackout">
+
+</div>
+<div class="popup-modal shadow" data-popup-modal="one">
+<em></em>
+</div>
+<p><a href="#top" id="back-to-top-link"><em></em></a></p>
+</body>
+</html>
